@@ -39,13 +39,23 @@
       </ul>
     </ul>
 
-    <form>
+    <form onsubmit="myFunction()">
       <!--пользователь вводит текст-->
-      <input type="text" placeholder="Имя">
+      <input id="iName" type="text" placeholder="Имя">
       <!-- и жмёт на эту кнопку, по которой запускается программа расчёта-->
       <input type="submit" value="Отправить">
     </form>
 
+    <script>
+    function myFunction() {
+      var param1 = document.getElementById("iName").value;
+      if(param1){
+        alert("Пуск расчёта с параметром "+param1);
+      }else{
+        alert("Параметр не задан. Расчёт невозможен!");
+      }
+    }
+    </script>
 
   </body>
 </html>
